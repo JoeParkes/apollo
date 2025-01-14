@@ -365,6 +365,14 @@
       };
     </script>
 
+    <!-- Inject product data globally -->
+    <script>
+      window.shopifyData = {
+        products: {{ collections.frontpage.products | json }},
+        cart: {{ cart | json }},
+      };
+    </script>
+
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
@@ -372,5 +380,8 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    <!-- Include the compiled React JavaScript bundle -->
+    <script src="{{ 'react-app/dist/main.js' | asset_url }}" async></script>
   </body>
 </html>
