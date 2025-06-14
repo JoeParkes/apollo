@@ -1,6 +1,12 @@
-# Welcome to your Expo app 👋
+# Apollo - Expo App 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+
+## Features
+
+- 📱 React Native with Expo
+- 📍 Location services to show your current position
+- 🎨 Themed components for light/dark mode
 
 ## Get started
 
